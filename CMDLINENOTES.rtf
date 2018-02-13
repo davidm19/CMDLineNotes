@@ -1,0 +1,53 @@
+COMMAND LINE NOTES!
+
+NAVIGATION:
+-pwd, ls, cd, mkdir, touch
+
+pwd = prints the working directory (where you are currently)
+ls = lists all the files in your current directory
+cd + directoryname = switches to the directory you specify
+cd .. = switches back a directory
+cd ~ = goes back to your home directory
+mkdir + directoryname = makes a new directory in your current directory
+touch + filename = creates a new file in your current directory
+sudo + command = administrator privileges for the command (computer is forced to execute this command)
+----------------------------------------------
+MANIPULATION:
+-ls -a, ls -l, ls -t, ls -alt (all of them combined,
+ cp, mv, rm, rm -r
+
+ls -a = lists all contents of a directory, including hidden fiels and directories
+ls -l = lists all files in a directory and gives details on every single one (size, owner, etc.)
+ls -t = lists all files
+cp + filename = copies files
+mv + filename + directory = moves file to listed directory
+mv + filename + new filename = renames file to new filename
+rm + filename = removes files
+rm -r + directoryname = removes directory
+----------------------------------------------
+MANAGING INPUT AND OUTPUT:
+->, >>, <, |, sort, uniq, grep, sed
+
+> = redirects standard output of a command to a file, overwriting previous content (if you write cat oceans.txt > continents.txt, and then write continents.txt, you'll only see what's inside oceans.txt as output)
+>> = takes standard output of the command on the left and appends it to the file on the right (think of the standard above; if you used >> instead of just >, then you would see output from both continents.txt and oceans.tst)
+< = same as > but in the opposite direction (cat < lakes.txt takes what's inside lakes.txt and inputs it into the cat command, so lakes.txt is the standard input for the cat command)
+| = takes the standard OUTPUT of the command on the left and "pipes" it as standard input to the command on the right (take, for instance, cat volcanoes.txt | wc; the output from cat volcanoes.txt is now the standard input of wc, which returns the character count from volcanoes.txt). Multiple |'s can be chained together.
+sort = takes the standard input of a file and sorts it in alphabetical order
+uniq = filters out duplicate, adjacent liens in a file
+grep + word you're searching for + filename = finds the word you're searching fore in the file
+grep -i = case insensitive grep
+grep -R = searches all fiels in a directory and outputs filenames and lines containing matched results
+grep -Rl = grep -R but it returns only filenames
+sed 's/snow (text to find)/rain (text to replace)/g (globally; all instances of text to find)' = basic "find and replace" 
+----------------------------------------------
+MANAGING THE ENVIRONMENT:
+-export, USER, PS1, HOME, PATH, env, ~/.bash_profile
+
+export VARIABLE="Value" = sets and exports an environment variable
+USER = name of current user
+PS1 = command prompt
+HOME = home directory (DO NOT CUSTOMIZE)
+PATH = returns a colon-separated list of file paths
+env = returns a list of environment variables
+----------------------------------------------
+WE'RE DONE!
